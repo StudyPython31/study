@@ -16,8 +16,8 @@ class AppiumTest():
             desired_caps['platformVersion'] = '6.0.1'
             desired_caps['deviceName'] = '732f063'
             desired_caps['app'] = 'D:/UIAutomator/package/app-release.apk'
-            desired_caps['appPackage'] = 'com.qixingzhibo.living'
-            desired_caps['appActivity'] = 'com.qiyu.live.activity.StartActivity'
+            desired_caps['appPackage'] = 'com.xxxx'
+            desired_caps['appActivity'] = 'com.xxxx.StartActivity'
             desired_caps['automationName'] = 'uiautomator2'
             desired_caps['noReset'] = 'true'
 

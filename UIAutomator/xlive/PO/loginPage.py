@@ -2,10 +2,10 @@
 from PO import common
 import time
 class CreatPage(common.Action):
-    loginByPhone_loc ='com.qixingzhibo.living:id/btnPhone'
-    username_loc ='com.qixingzhibo.living:id/userId'
-    password_loc ='com.qixingzhibo.living:id/passWord'
-    loginBtn_loc ='com.qixingzhibo.living:id/btn_login'
+    loginByPhone_loc ='com.xxxx:id/btnPhone'
+    username_loc ='com.xxxx:id/userId'
+    password_loc ='com.xxxx:id/passWord'
+    loginBtn_loc ='com.xxxx:id/btn_login'
 
     '''选择手机账号登陆按钮'''
     def loginByPhone_link(self):

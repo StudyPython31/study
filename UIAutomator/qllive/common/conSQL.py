@@ -3,11 +3,11 @@ import pymysql
 
 class MysqlConnect(object):
     def __init__(self):
-        self.connect = pymysql.Connect(host='gz-cdb-p9mupxe8.sql.tencentcdb.com',
-                          user='readonly',
-                          password='readonly@root&2037',
-                          db='qiyu',
-                          port=62332,
+        self.connect = pymysql.Connect(host='xxxx',
+                          user='xxxx',
+                          password='xxxx',
+                          db='xxxx',
+                          port=xxx,
                           charset='utf8')
         self.cursor = self.connect.cursor()
 

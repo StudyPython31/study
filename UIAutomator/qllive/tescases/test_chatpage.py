@@ -16,7 +16,7 @@ class TestChatpage(unittest.TestCase):
     def test_sendmsg(self):
         # ccp = CreateChatPage(self.driver)
         ccp1 = CreateChatPage(self.driver1)
-        ccp1.selectsearchhistory('8324162')
+        ccp1.selectsearchhistory('XXXX')
         #ccp1.searchuid('8324162')
         ccp1.selectrslt(0)
 

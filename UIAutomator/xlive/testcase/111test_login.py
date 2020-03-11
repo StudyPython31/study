@@ -24,7 +24,7 @@ class Login(unittest.TestCase):
       time.sleep(10)
       cp = CreatPage(self.driver)
       cp.loginByPhone_link()
-      cp.run_caseLogin('1000051','123456789')
+      cp.run_caseLogin('xxxx','123456789')
       action = Action(self.driver)
       res = action.getToastExit('用户不存在或密码不正确')
       self.assertTrue(res,True)
@@ -34,10 +34,10 @@ class Login(unittest.TestCase):
       time.sleep(10)
       cp = CreatPage(self.driver)
       cp.loginByPhone_link()
-      cp.run_caseLogin('1000055','12345678')
+      cp.run_caseLogin('xxxx','12345678')
       time.sleep(10)
       action = Action(self.driver)
-      self.assertTrue(True,action.isElementExist('com.qixingzhibo.living:id/btn_close_attendance'))
+      self.assertTrue(True,action.isElementExist('com.xxxx:id/btn_close_attendance'))
 
 
 

@@ -17,15 +17,15 @@ class Login(unittest.TestCase):
         caps = {}
         caps["platformName"] = "Android"
         caps["deviceName"] = "a46ed046"
-        caps["appPackage"] = "com.rare.chat"
-        #caps["appActivity"] = ".peiliao.avtivity.login.ChatLoginActivity"
-        caps["appActivity"] = ".pages.mian.TabMenuActivity"
+        caps["appPackage"] = "com.XXXX"
+        #caps["appActivity"] = "XXXX.ChatLoginActivity"
+        caps["appActivity"] = ".XXXX"
         caps['automationName'] = 'uiautomator2'
         caps['noReset'] = True
         caps['fullReset'] = False
 
         self.driver = webdriver.Remote("http://localhost:4724/wd/hub", caps)
-        #self.driver.wait_activity(".peiliao.avtivity.login.ChatLoginActivity", 5)
+        #self.driver.wait_activity(".xxxx.ChatLoginActivity", 5)
 
     def tearDown(self):
         # self.driver.quit()
@@ -33,7 +33,7 @@ class Login(unittest.TestCase):
 
     def findElement(self,driver,id):
         try:
-            #self.driver.find_element_by_id("com.rare.chat:id/dev_btn").is_displayed()
+            #self.driver.find_element_by_id("com.xxxx:id/dev_btn").is_displayed()
             WebDriverWait(driver,2).until(lambda diver:driver.find_element_by_id(id))
             return True
         except exceptions.TimeoutException:
@@ -52,44 +52,44 @@ class Login(unittest.TestCase):
 
 
     def test_haha(self):
-        liao = self.driver.find_element_by_id('com.rare.chat:id/ll_voice_chat')
+        liao = self.driver.find_element_by_id('com.xxxx:id/ll_voice_chat')
         print(liao)
         time.sleep(3)
         liao.click()
-        self.driver.find_element_by_id('com.rare.chat:id/ivSearch').click()
+        self.driver.find_element_by_id('com.xxxx:id/ivSearch').click()
         text = self.driver.find_element_by_xpath("//*[@text='郭果']")
         time.sleep(3)
         text.click()
-        lst = self.driver.find_elements_by_id('com.rare.chat:id/rv_search_result')
+        lst = self.driver.find_elements_by_id('com.xxxx:id/rv_search_result')
         print('uuuuuuuuuuu'+lst)
-        self.find_ByIndex('com.rare.chat:id/rv_search_result', 0).click()
+        self.find_ByIndex('com.xxxx:id/rv_search_result', 0).click()
 
 
 '''
     def test001_login(self):
-        el1 = self.driver.find_element_by_id("com.rare.chat:id/btnPhone2")
+        el1 = self.driver.find_element_by_id("com.xxxx:id/btnPhone2")
         time.sleep(3)
         el1.click()
 
-        #el11 = self.driver.find_element_by_id("com.rare.chat:id/tv_agreement_ensure").is_displayed()
-        el11 = self.findElement(self.driver,"com.rare.chat:id/tv_agreement_ensure")
+        #el11 = self.driver.find_element_by_id("com.xxxx:id/tv_agreement_ensure").is_displayed()
+        el11 = self.findElement(self.driver,"com.xxxx:id/tv_agreement_ensure")
         print("1111111111111111111")
         if(el11):
             print("22222222")
-            el12 = self.driver.find_element_by_id("com.rare.chat:id/tv_agreement_ensure")
+            el12 = self.driver.find_element_by_id("com.xxxx:id/tv_agreement_ensure")
             el12.click()
             time.sleep(3)
             el1.click()
 
         print("333333333333")
-        #el = self.driver.find_element_by_id("com.rare.chat:id/rlContainer")
+        #el = self.driver.find_element_by_id("com.xxxx:id/rlContainer")
         action = TouchAction(self.driver)
         action.long_press(x=560,y=1300,duration=3000).perform()
-        #changeenv = self.driver.find_element_by_id("com.rare.chat:id/dev_btn").is_displayed()
-        changeenv = self.findElement(self.driver,"com.rare.chat:id/dev_btn")
+        #changeenv = self.driver.find_element_by_id("com.xxxx:id/dev_btn").is_displayed()
+        changeenv = self.findElement(self.driver,"com.xxxx:id/dev_btn")
         #print("444444444444444444444:"+changeenv)
         if(changeenv):
-            self.driver.find_element_by_id("com.rare.chat:id/dev_btn").click()
+            self.driver.find_element_by_id("com.xxxx:id/dev_btn").click()
             print("6666666666666666")
             time.sleep(5)
             if(changeenv):
@@ -99,19 +99,19 @@ class Login(unittest.TestCase):
             else:
                 print("88888888888888")
                 el1.click()
-        #self.driver.find_element_by_id("com.rare.chat:id/dev_btn").click()
+        #self.driver.find_element_by_id("comxxxx:id/dev_btn").click()
 
-        el2 = self.driver.find_element_by_id("com.rare.chat:id/userId")
+        el2 = self.driver.find_element_by_id("com.xxxx:id/userId")
         el2.send_keys("8324162")
-        el3 = self.driver.find_element_by_id("com.rare.chat:id/passWord")
+        el3 = self.driver.find_element_by_id("com.xxxx:id/passWord")
         el3.send_keys("12345678")
-        el4 = self.driver.find_element_by_id("com.rare.chat:id/btn_login")
+        el4 = self.driver.find_element_by_id("com.xxxx:id/btn_login")
         el4.click()
         time.sleep(3)
         action.tap(x=560, y=600).perform()
         print("9999999999")
-        shouye = self.driver.find_element_by_id("com.rare.chat:id/ll_tab_home").is_displayed()
-        #huati = self.driver.find_element_by_id("com.rare.chat:id/ll_voice_chat")
+        shouye = self.driver.find_element_by_id("com.xxxx:id/ll_tab_home").is_displayed()
+        #huati = self.driver.find_element_by_id("comxxxx:id/ll_voice_chat")
         #
         self.assertTrue(shouye)
         '''

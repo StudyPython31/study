@@ -9,14 +9,14 @@ class AppiumTest():
         caps["plateformVersion"] = "7.1"
         caps["deviceName"] = "OJFEU46LFU594HSS"
         caps["udid"] = 'OJFEU46LFU594HSS'
-        caps["appPackage"] = "com.rare.chat"
-        caps["appActivity"] = '.pages.splash.ChatStartActivity'  #".peiliao.avtivity.ChatStartActivity"
+        caps["appPackage"] = "com.XXXX"
+        caps["appActivity"] = '.XXXX'  #".XXXX.ChatStartActivity"
         caps['automationName'] = 'uiautomator2'
         caps['noReset'] = True
         caps['fullReset'] = False
 
         self.driver = webdriver.Remote("http://localhost:4723/wd/hub", caps)
-        #self.driver.wait_activity(".peiliao.avtivity.login.ChatLoginActivity", 5)
+        #self.driver.wait_activity("XXXX.login.ChatLoginActivity", 5)
         self.driver.implicitly_wait(30)
 
         caps1 = {}
@@ -24,14 +24,14 @@ class AppiumTest():
         caps1["plateformVersion"] = "7.1"
         caps1["deviceName"] = "a46ed046"
         caps1["udid"] = 'a46ed046'
-        caps1["appPackage"] = "com.rare.chat"
-        caps1["appActivity"] = '.pages.splash.ChatStartActivity'  # ".peiliao.avtivity.ChatStartActivity"
+        caps1["appPackage"] = "XXXX"
+        caps1["appActivity"] = 'XXXX'  # ".peiliao.avtivity.ChatStartActivity"
         caps1['automationName'] = 'uiautomator2'
         caps1['noReset'] = True
         caps1['fullReset'] = False
 
         self.driver1 = webdriver.Remote("http://localhost:4724/wd/hub", caps1)
-        # self.driver.wait_activity(".peiliao.avtivity.login.ChatLoginActivity", 5)
+        # self.driver.wait_activity("XXXX.login.ChatLoginActivity", 5)
         self.driver1.implicitly_wait(30)
 
 
